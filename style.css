@@ -15,9 +15,13 @@ body {
 /* 容器：手機版滿版，電腦版限制寬度並置中 */
 .container {
     max-width: 600px; /* 模擬手機寬度，讓電腦版看起來像精緻的長條卡片 */
-    margin: 0 auto;
+    width: 92%; /* 讓它在手機上只佔 92% 寬度，左右自動留白 */
+    margin: 20px auto; /* 上下留 20px 空間，左右自動置中 (auto) */
+    border-radius: 15px; /* 新增圓角，搭配邊緣留白會非常有質感！ */
+    /* ========================= */
+
     background-color: #ffffff;
-    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    box-shadow: 0 0 20px rgba(0,0,0,0.08); /* 稍微加深一點點陰影，立體感更好 */
     overflow: hidden; /* 防止內容溢出 */
 }
 
