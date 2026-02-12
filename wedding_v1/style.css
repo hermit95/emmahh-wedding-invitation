@@ -1,0 +1,92 @@
+/* 1. 全域設定：讓所有元素乖乖排好 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Serif TC', serif; /* 使用優雅的襯線字體 */
+    background-color: #f4f1ea; /* 背景色：淺米色 */
+    color: #4a4a4a; /* 文字色：深灰 */
+    line-height: 1.6;
+}
+
+/* 2. 主容器：限制最大寬度，讓電腦版不會太寬，手機版滿版 */
+.container {
+    max-width: 600px; /* 限制寬度類似手機畫面 */
+    margin: 0 auto;   /* 居中 */
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05); /* 微微的陰影 */
+}
+
+/* 3. 圖片設定 */
+img {
+    max-width: 100%; /* 確保圖片不會超出螢幕 */
+    height: auto;
+    display: block;
+    border-radius: 8px; /* 圓角 */
+    margin-bottom: 20px;
+}
+
+/* 4. 文字排版 */
+h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    color: #b08d55; /* 金色標題 */
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    text-align: center;
+    border-bottom: 2px solid #f4f1ea;
+    padding-bottom: 10px;
+    margin: 30px 0 20px 0;
+    color: #8c7b65;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.subtitle {
+    color: #888;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+/* 5. 嵌入物件 (Map & Form) 的容器設定 */
+.map-container, .form-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* 強制讓 Google 的 iframe 變成 100% 寬度 */
+iframe {
+    width: 100% !important;
+    border: none;
+    display: block;
+}
+
+/* 調整地圖高度 */
+.map-container iframe {
+    height: 350px;
+}
+
+/* 調整表單高度 (需要長一點才不用一直捲動) */
+.form-container iframe {
+    min-height: 800px; /* 依照你的表單長度調整這個數字 */
+}
+
+/* 6. 頁尾 */
+footer {
+    text-align: center;
+    padding: 40px 0 20px 0;
+    font-size: 0.8rem;
+    color: #ccc;
+}

@@ -1,0 +1,293 @@
+/* 全域設定 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f9f7f2; /* 米白色背景 */
+    color: #5a5a5a;
+    font-family: 'Noto Serif TC', serif;
+    line-height: 1.8;
+}
+
+/* 容器：手機版滿版，電腦版限制寬度並置中 */
+.container {
+    max-width: 600px; /* 模擬手機寬度，讓電腦版看起來像精緻的長條卡片 */
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    overflow: hidden; /* 防止內容溢出 */
+}
+
+/* --- 字體類別 --- */
+.rounded-font {
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+.artistic-font {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+}
+
+/* --- 通用圖片設定 --- */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- 章節通用間距 --- */
+section {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* --- 封面 (Cover) --- */
+.section-cover {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fdfbf7;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    color: #b08d55; /* 金色 */
+    margin-bottom: 10px;
+}
+
+.sub-title {
+    font-size: 2rem;
+    color: #d4a373;
+    margin-bottom: 20px;
+}
+
+.names {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+/* --- 故事章節 (起承轉) --- */
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #b08d55;
+}
+
+.story-img {
+    border-radius: 10px; /* 圖片圓角 */
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: #fcfaf6; /* 圖片背景色，讓照片更突出 */
+}
+
+.story-img2 {
+    background-color: #fcfcfc00; /* 圖片背景色，讓照片更突出 */
+    height: 140px; 
+    object-fit: cover; 
+    margin: 0 auto;
+}
+
+.story-text {
+    text-align: justify; /* 文字左右對齊 */
+    font-size: 0.95rem;
+    padding: 0 10px;
+}
+
+/* --- 合 (新人介紹 & 頭像) --- */
+.avatar-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 15px; /* 頭像跟愛心的距離 */
+}
+
+.avatar-box {
+    text-align: center;
+    width: 100px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* 圓形頭像 */
+    object-fit: cover;
+    border: 3px solid #f3e9d2;
+    margin-bottom: 5px;
+}
+
+.eng-name {
+    font-size: 1.2rem;
+    color: #b08d55;
+    line-height: 1.2;
+}
+
+.chi-name {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.heart-img {
+    width: 30px; /* 愛心大小 */
+    animation: heartbeat 1.5s infinite; /* 愛心跳動動畫 */
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.union-photo img {
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.thank-you-text {
+    font-style: italic;
+    color: #666;
+}
+
+/* --- 婚禮資訊 --- */
+.divider-img {
+    margin: 20px auto;
+    width: 80%; /* 分隔線寬度 */
+    opacity: 0.8;
+}
+
+.calendar-box {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px dashed #d4a373; /* 虛線邊框裝飾 */
+    border-radius: 8px;
+}
+
+.info-list {
+    margin: 30px 0;
+    text-align: left; /* 資訊靠左對齊比較整齊 */
+    display: inline-block; /* 讓區塊置中 */
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.icon-gold {
+    color: #b08d55;
+    margin-right: 15px;
+    font-size: 1.2rem;
+    width: 25px; /* 確保圖示寬度一致，文字才不會跑掉 */
+    text-align: center;
+}
+
+.map-container {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+.location-text {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* --- 頁尾 --- */
+.section-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.end-text {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.copyright {
+    font-size: 0.7rem;
+    opacity: 0.5;
+}
+
+/* --- 水平滑動相簿專用設定 --- */
+
+/* 1. 滑動容器：設定為橫向排列，並允許左右捲動 */
+.scrolling-wrapper {
+    display: flex;             /* 讓內容橫向排列 */
+    overflow-x: auto;          /* 超出範圍時出現水平捲軸 */
+    overflow-y: hidden;        /* 隱藏垂直捲軸 */
+    scroll-snap-type: x mandatory; /* 關鍵！設定滑動時會「卡」在特定位置 */
+    gap: 15px;                 /* 照片之間的間距 */
+    padding-bottom: 20px;      /* 預留底部空間 */
+    
+    /* 隱藏醜醜的捲軸 (Chrome/Safari/Opera) */
+    -webkit-overflow-scrolling: touch; /* 讓 iOS 滑動更順暢 */
+}
+
+/* 隱藏捲軸 (針對不同瀏覽器) */
+.scrolling-wrapper::-webkit-scrollbar {
+    display: none;
+}
+.scrolling-wrapper {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* 2. 卡片設定：每張照片的大小 */
+.card {
+    flex: 0 0 85%; /* 關鍵技巧：設為 85% 寬度，這樣下一張照片會露出一點點，使用者才知道可以滑 */
+    scroll-snap-align: center; /* 滑動停止時，照片會自動置中 */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;       /* 填滿卡片 */
+    object-fit: cover;  /* 保持比例裁切 */
+    display: block;
+}
+
+/* 提示文字 */
+.hint-text {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 10px;
+    animation: blink 2s infinite; /* 讓文字閃爍吸引注意 */
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* --- 小圓點導航樣式 --- */
+.dots-container {
+    text-align: center;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* 圓點之間的距離 */
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #ddd; /* 未選中的顏色 (淺灰) */
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer; /* 讓滑鼠移過去變成手指形狀 */
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #b08d55; /* 選中時的顏色 (金色) */
+    transform: scale(1.2); /* 選中時稍微變大 */
+}
