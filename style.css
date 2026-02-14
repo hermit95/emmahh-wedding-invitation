@@ -94,7 +94,7 @@ section {
 }
 
 .story-text {
-    text-align: justify; /* 文字左右對齊 */
+    text-align: center; 
     font-size: 0.95rem;
     padding: 0 10px;
 }
